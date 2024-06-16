@@ -51,4 +51,4 @@ jobs:
             docker pull ${{ secrets.DOCKER_USERNAME }}/sunjoo:drinkyionary
             docker stop sunjoo || true
             docker rm sunjoo || true
-            docker run -d -p 8082:8082 --name sunjoo ${{ secrets.DOCKER_USERNAME }}/sunjoo:drinkyionary
+            docker run -d -p 8080:8082 --name sunjoo ${{ secrets.DOCKER_USERNAME }}/sunjoo:drinkyionary
