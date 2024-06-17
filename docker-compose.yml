@@ -1,15 +1,11 @@
 version: '3.8'
 services:
   drinktionary:
-    image: sunyerim/sunjoo:drinkyionary
-    container_name: drinktionary
+    image: drinktionary
+    build:
+      context: .
+      dockerfile: ./Dockerfile
     restart: always
-    #    depends_on:
-    #      - redis
     ports:
-      - "8080:8082"
-    environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://sunjoo-drinktionary.clau8wyu484y.ap-northeast-2.rds.amazonaws.com:3306
-      SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: drinktionary0606
-      SPRING_DATASOURCE_DRIVER_CLASS: com.mysql.cj.jdbc.Driver
+      - 8080:8082
+
