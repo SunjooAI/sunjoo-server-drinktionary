@@ -1,9 +1,12 @@
 package com.sunjoo.drinktionary.service;
 
-import com.sunjoo.drinktionary.DrinkRepository;
-import lombok.RequiredArgsConstructor;
+import com.sunjoo.drinktionary.repository.DrinkRepository;
+import com.sunjoo.drinktionary.dto.DrinkResponse;
+import com.sunjoo.drinktionary.entity.Drink;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Service
 @Transactional(readOnly = true)
@@ -18,4 +21,11 @@ public class DrinkService {
     }
 
     // 전체 조회
+//    public List<DrinkResponse> getAllDrinks() {
+//        List<Drink> drinks = drinkRepository.findAll();
+//
+//
+//    }
+
+
 }
