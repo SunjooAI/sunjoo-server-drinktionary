@@ -50,4 +50,6 @@ jobs:
           script: |
             cd /home/ubuntu/sunjoo-server-drinktionary
             docker-compose down
+            git pull origin main
+            docker pull ${{ secrets.DOCKER_USERNAME }}/drinktionary:latest
             docker-compose up -d --build
