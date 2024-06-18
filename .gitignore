@@ -1,5 +1,6 @@
 *.properties
 .idea
+.gradle
 build/classes
 build/generated
 build/reports
