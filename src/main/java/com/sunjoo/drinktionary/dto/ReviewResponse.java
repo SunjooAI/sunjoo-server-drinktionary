@@ -19,7 +19,18 @@ public class ReviewResponse {
     private final String comment;
     private final Date date;
     private final long drinkId;
+    private final int drinkCapacity;
 
-
+    // review entity객체 -> reviewResponse로 변환
+    public static ReviewResponse createFromReview(final Review review) {
+        return new ReviewResponse(review.getId(),
+                review.getUserId(),
+                review.getStarRating(),
+                review.getContent(),
+                review.getCreateAt(),
+                review.getDrink().getId(),
+                review.getDrink().getCapacity()
+                );
+    }
 
 }
