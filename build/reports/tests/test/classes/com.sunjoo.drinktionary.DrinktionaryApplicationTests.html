@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.267s</div>
+<div class="counter">0.308s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,7 @@
 </thead>
 <tr>
 <td class="success">contextLoads()</td>
-<td class="success">0.267s</td>
+<td class="success">0.308s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -87,8 +87,8 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>11:24:56.718 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.sunjoo.drinktionary.DrinktionaryApplicationTests]: DrinktionaryApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-11:24:56.769 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.sunjoo.drinktionary.DrinktionaryApplication for test class com.sunjoo.drinktionary.DrinktionaryApplicationTests
+<pre>01:49:21.576 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.sunjoo.drinktionary.DrinktionaryApplicationTests]: DrinktionaryApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+01:49:21.633 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.sunjoo.drinktionary.DrinktionaryApplication for test class com.sunjoo.drinktionary.DrinktionaryApplicationTests
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
@@ -98,23 +98,23 @@
 
  :: Spring Boot ::                (v3.3.0)
 
-2024-06-18T11:24:56.963+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] c.s.d.DrinktionaryApplicationTests       : Starting DrinktionaryApplicationTests using Java 17.0.9 with PID 6504 (started by Samsung in /Users/Samsung/Desktop/2024/sunjooProject/sunjoo-server-drinktionary)
-2024-06-18T11:24:56.963+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] c.s.d.DrinktionaryApplicationTests       : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2024-06-18T11:24:57.230+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-06-18T11:24:57.294+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 1 JPA repository interface.
-2024-06-18T11:24:57.385+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b72bbe4a-6205-35db-afe6-eb506b14b4e4
-2024-06-18T11:24:57.442+09:00  WARN 6504 --- [sentimentAnalysis] [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2024-06-18T11:24:57.443+09:00  WARN 6504 --- [sentimentAnalysis] [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2024-06-18T11:24:57.501+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-06-18T11:24:57.524+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-06-18T11:24:57.541+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-06-18T11:24:57.653+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-06-18T11:24:57.662+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-06-18T11:24:57.738+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:sunjoo user=ROOT
-2024-06-18T11:24:57.738+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-06-18T11:24:57.748+09:00  WARN 6504 --- [sentimentAnalysis] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-06-18T11:24:57.748+09:00  WARN 6504 --- [sentimentAnalysis] [    Test worker] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-06-18T11:24:58.082+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-21T01:49:21.906+09:00  INFO 8538 --- [drinktionary] [    Test worker] c.s.d.DrinktionaryApplicationTests       : Starting DrinktionaryApplicationTests using Java 17.0.9 with PID 8538 (started by Samsung in /Users/Samsung/Desktop/2024/sunjooProject/sunjoo-server-drinktionary)
+2024-06-21T01:49:21.906+09:00  INFO 8538 --- [drinktionary] [    Test worker] c.s.d.DrinktionaryApplicationTests       : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-06-21T01:49:22.282+09:00  INFO 8538 --- [drinktionary] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-21T01:49:22.365+09:00  INFO 8538 --- [drinktionary] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 2 JPA repository interfaces.
+2024-06-21T01:49:22.490+09:00  INFO 8538 --- [drinktionary] [    Test worker] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c8fe7a44-0824-379d-a954-017e564b753a
+2024-06-21T01:49:22.565+09:00  WARN 8538 --- [drinktionary] [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-06-21T01:49:22.566+09:00  WARN 8538 --- [drinktionary] [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-21T01:49:22.647+09:00  INFO 8538 --- [drinktionary] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-21T01:49:22.670+09:00  INFO 8538 --- [drinktionary] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-21T01:49:22.690+09:00  INFO 8538 --- [drinktionary] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-21T01:49:22.850+09:00  INFO 8538 --- [drinktionary] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-21T01:49:22.864+09:00  INFO 8538 --- [drinktionary] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-21T01:49:22.977+09:00  INFO 8538 --- [drinktionary] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:sunjoo user=ROOT
+2024-06-21T01:49:22.978+09:00  INFO 8538 --- [drinktionary] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-21T01:49:22.992+09:00  WARN 8538 --- [drinktionary] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-21T01:49:22.992+09:00  WARN 8538 --- [drinktionary] [    Test worker] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-06-21T01:49:23.443+09:00  INFO 8538 --- [drinktionary] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 Hibernate: 
     create table drink_info (
         drink_id bigint not null auto_increment,
@@ -129,25 +129,35 @@ Hibernate:
         primary key (drink_id)
     ) engine=InnoDB
 Hibernate: 
-    create table review (
-        id bigint not null auto_increment,
-        primary key (id)
+    create table drink_review (
+        review_id bigint not null auto_increment,
+        content varchar(255),
+        create_at datetime(6),
+        star_rating float(53),
+        user_id varchar(255),
+        drink_id bigint,
+        primary key (review_id)
     ) engine=InnoDB
-2024-06-18T11:24:58.110+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-06-18T11:24:58.275+09:00  WARN 6504 --- [sentimentAnalysis] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-06-18T11:24:58.485+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2024-06-18T11:24:58.501+09:00  WARN 6504 --- [sentimentAnalysis] [    Test worker] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2024-06-18T11:24:58.512+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2024-06-18T11:24:58.552+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2024-06-18T11:24:58.554+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-06-18T11:24:58.563+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] com.netflix.discovery.DiscoveryClient    : Disable delta property : true
-2024-06-18T11:24:58.563+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2024-06-18T11:24:58.563+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2024-06-18T11:24:58.563+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2024-06-18T11:24:58.563+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2024-06-18T11:24:58.563+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2024-06-18T11:24:58.564+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2024-06-18T11:24:58.711+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on GET request for &quot;http://localhost:8761/eureka/apps/&quot;: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for &quot;http://localhost:8761/eureka/apps/&quot;: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+Hibernate: 
+    alter table drink_review 
+       add constraint FKgd0cps943972ugi3a1swunxse 
+       foreign key (drink_id) 
+       references drink_info (drink_id)
+2024-06-21T01:49:23.485+09:00  INFO 8538 --- [drinktionary] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-21T01:49:23.739+09:00  WARN 8538 --- [drinktionary] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-21T01:49:24.003+09:00  INFO 8538 --- [drinktionary] [    Test worker] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-06-21T01:49:24.024+09:00  WARN 8538 --- [drinktionary] [    Test worker] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-06-21T01:49:24.037+09:00  INFO 8538 --- [drinktionary] [    Test worker] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-06-21T01:49:24.087+09:00  INFO 8538 --- [drinktionary] [    Test worker] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-06-21T01:49:24.089+09:00  INFO 8538 --- [drinktionary] [    Test worker] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-06-21T01:49:24.100+09:00  INFO 8538 --- [drinktionary] [    Test worker] com.netflix.discovery.DiscoveryClient    : Disable delta property : true
+2024-06-21T01:49:24.100+09:00  INFO 8538 --- [drinktionary] [    Test worker] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-06-21T01:49:24.100+09:00  INFO 8538 --- [drinktionary] [    Test worker] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-06-21T01:49:24.100+09:00  INFO 8538 --- [drinktionary] [    Test worker] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-06-21T01:49:24.100+09:00  INFO 8538 --- [drinktionary] [    Test worker] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-06-21T01:49:24.101+09:00  INFO 8538 --- [drinktionary] [    Test worker] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-06-21T01:49:24.101+09:00  INFO 8538 --- [drinktionary] [    Test worker] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-06-21T01:49:24.311+09:00  INFO 8538 --- [drinktionary] [    Test worker] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://sunjoo-server-eureka-eureka-1:8761/eureka/}, exception=I/O error on GET request for &quot;http://sunjoo-server-eureka-eureka-1:8761/eureka/apps/&quot;: sunjoo-server-eureka-eureka-1: nodename nor servname provided, or not known stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for &quot;http://sunjoo-server-eureka-eureka-1:8761/eureka/apps/&quot;: sunjoo-server-eureka-eureka-1: nodename nor servname provided, or not known
 	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
@@ -309,18 +319,16 @@ Hibernate:
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:66)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:554)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:633)
-	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
-	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
-	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
-	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:189)
+Caused by: java.net.UnknownHostException: sunjoo-server-eureka-eureka-1: nodename nor servname provided, or not known
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:934)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1543)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1533)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1385)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1306)
+	at org.apache.hc.client5.http.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:144)
 	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:450)
 	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
 	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
@@ -350,8 +358,8 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
 	... 159 more
 
-2024-06-18T11:24:58.713+09:00  WARN 6504 --- [sentimentAnalysis] [    Test worker] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for &quot;http://localhost:8761/eureka/apps/&quot;: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
-2024-06-18T11:24:58.714+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SENTIMENTANALYSIS/192.168.35.168:sentimentAnalysis:8091 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+2024-06-21T01:49:24.313+09:00  WARN 8538 --- [drinktionary] [    Test worker] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for &quot;http://sunjoo-server-eureka-eureka-1:8761/eureka/apps/&quot;: sunjoo-server-eureka-eureka-1: nodename nor servname provided, or not known
+2024-06-21T01:49:24.314+09:00  INFO 8538 --- [drinktionary] [    Test worker] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRINKTIONARY/192.168.45.249:drinktionary:8091 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
@@ -503,17 +511,17 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 
-2024-06-18T11:24:58.715+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from primary servers failed
-2024-06-18T11:24:58.715+09:00  WARN 6504 --- [sentimentAnalysis] [    Test worker] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
-2024-06-18T11:24:58.716+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from backup servers failed
-2024-06-18T11:24:58.716+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2024-06-18T11:24:58.717+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2024-06-18T11:24:58.719+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1718677498718 with initial instances count: 0
-2024-06-18T11:24:58.720+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SENTIMENTANALYSIS with eureka with status UP
-2024-06-18T11:24:58.721+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1718677498721, current=UP, previous=STARTING]
-2024-06-18T11:24:58.721+09:00  INFO 6504 --- [sentimentAnalysis] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SENTIMENTANALYSIS/192.168.35.168:sentimentAnalysis:8091: registering service...
-2024-06-18T11:24:58.731+09:00  INFO 6504 --- [sentimentAnalysis] [    Test worker] c.s.d.DrinktionaryApplicationTests       : Started DrinktionaryApplicationTests in 1.905 seconds (process running for 2.4)
-2024-06-18T11:24:58.741+09:00  INFO 6504 --- [sentimentAnalysis] [nfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for &quot;http://localhost:8761/eureka/apps/SENTIMENTANALYSIS&quot;: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for &quot;http://localhost:8761/eureka/apps/SENTIMENTANALYSIS&quot;: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+2024-06-21T01:49:24.316+09:00  INFO 8538 --- [drinktionary] [    Test worker] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from primary servers failed
+2024-06-21T01:49:24.316+09:00  WARN 8538 --- [drinktionary] [    Test worker] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
+2024-06-21T01:49:24.316+09:00  INFO 8538 --- [drinktionary] [    Test worker] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from backup servers failed
+2024-06-21T01:49:24.317+09:00  INFO 8538 --- [drinktionary] [    Test worker] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-06-21T01:49:24.318+09:00  INFO 8538 --- [drinktionary] [    Test worker] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-06-21T01:49:24.320+09:00  INFO 8538 --- [drinktionary] [    Test worker] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1718902164320 with initial instances count: 0
+2024-06-21T01:49:24.322+09:00  INFO 8538 --- [drinktionary] [    Test worker] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application DRINKTIONARY with eureka with status UP
+2024-06-21T01:49:24.323+09:00  INFO 8538 --- [drinktionary] [    Test worker] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1718902164323, current=UP, previous=STARTING]
+2024-06-21T01:49:24.323+09:00  INFO 8538 --- [drinktionary] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRINKTIONARY/192.168.45.249:drinktionary:8091: registering service...
+2024-06-21T01:49:24.333+09:00  INFO 8538 --- [drinktionary] [    Test worker] c.s.d.DrinktionaryApplicationTests       : Started DrinktionaryApplicationTests in 2.625 seconds (process running for 3.255)
+2024-06-21T01:49:24.349+09:00  INFO 8538 --- [drinktionary] [nfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://sunjoo-server-eureka-eureka-1:8761/eureka/}, exception=I/O error on POST request for &quot;http://sunjoo-server-eureka-eureka-1:8761/eureka/apps/DRINKTIONARY&quot;: sunjoo-server-eureka-eureka-1 stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for &quot;http://sunjoo-server-eureka-eureka-1:8761/eureka/apps/DRINKTIONARY&quot;: sunjoo-server-eureka-eureka-1
 	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
@@ -538,18 +546,13 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:840)
-Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:554)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:633)
-	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
-	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
-	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
-	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:189)
+Caused by: java.net.UnknownHostException: sunjoo-server-eureka-eureka-1
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1533)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1385)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1306)
+	at org.apache.hc.client5.http.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:144)
 	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:450)
 	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
 	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
@@ -579,8 +582,8 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
 	... 22 more
 
-2024-06-18T11:24:58.742+09:00  WARN 6504 --- [sentimentAnalysis] [nfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for &quot;http://localhost:8761/eureka/apps/SENTIMENTANALYSIS&quot;: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
-2024-06-18T11:24:58.742+09:00  WARN 6504 --- [sentimentAnalysis] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SENTIMENTANALYSIS/192.168.35.168:sentimentAnalysis:8091 - registration failed Cannot execute request on any known server
+2024-06-21T01:49:24.349+09:00  WARN 8538 --- [drinktionary] [nfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for &quot;http://sunjoo-server-eureka-eureka-1:8761/eureka/apps/DRINKTIONARY&quot;: sunjoo-server-eureka-eureka-1
+2024-06-21T01:49:24.350+09:00  WARN 8538 --- [drinktionary] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRINKTIONARY/192.168.45.249:drinktionary:8091 - registration failed Cannot execute request on any known server
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.2.jar:2.0.2]
@@ -598,7 +601,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
 
-2024-06-18T11:24:58.744+09:00  WARN 6504 --- [sentimentAnalysis] [nfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+2024-06-21T01:49:24.351+09:00  WARN 8538 --- [drinktionary] [nfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.2.jar:2.0.2]
@@ -627,7 +630,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.8</a> at 2024. 6. 18. 오전 11:24:59</p>
+<a href="http://www.gradle.org">Gradle 8.8</a> at 2024. 6. 21. 오전 1:49:24</p>
 </div>
 </div>
 </body>

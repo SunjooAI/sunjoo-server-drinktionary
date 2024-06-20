@@ -1,12 +1,13 @@
 server:
   port: 8091
   servlet:
-    context-path: /analyze
+    context-path: /drinks
 
 spring:
   application:
-    name: sentimentAnalysis
+    name: drinktionary
   datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://sunjoo-drinktionary.clau8wyu484y.ap-northeast-2.rds.amazonaws.com:3306/sunjoo?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
     username: root
     password: drinktionary0606
@@ -23,5 +24,5 @@ eureka:
     disable-delta: true
     register-with-eureka: true
     fetch-registry: true
-  service-url:
-    defaultZone: http://sunjoo-server-eureka-eureka-1:8761/eureka/
+    service-url:
+      defaultZone: http://sunjoo-server-eureka-eureka-1:8761/eureka/
