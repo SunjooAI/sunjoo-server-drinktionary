@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static java.util.Comparator.comparingDouble;
 import static java.util.Comparator.comparingInt;
 
 @Service
@@ -88,6 +89,16 @@ public class DrinkService {
                 .sorted(comparingInt(DrinkWithRatingResponse::getReviewCount).reversed()) // 리뷰 수를 기준으로 내림차순 정렬
                 .limit(5) // 상위 5개만 선택
                 .toList(); // 최종 결과를 리스트로 변환하여 반환
+    }
+
+    public List<DrinkWithRatingResponse> findTop5ByRating() {
+        final List<DrinkWithRatingResponse> drinks = getDrinksWithRating();
+
+        return drinks.stream()
+                .filter(drink -> drink.getRating() != 0)
+                .sorted(comparingDouble(DrinkWithRatingResponse::getRating))
+                .limit(5)
+                .toList();
     }
 
 }

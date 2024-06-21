@@ -1,9 +1,6 @@
 package com.sunjoo.drinktionary.controller;
 
-import com.sunjoo.drinktionary.dto.DrinkResponse;
-import com.sunjoo.drinktionary.dto.DrinkResponses;
-import com.sunjoo.drinktionary.dto.ReviewResponse;
-import com.sunjoo.drinktionary.dto.ReviewResponses;
+import com.sunjoo.drinktionary.dto.*;
 import com.sunjoo.drinktionary.entity.DrinkType;
 import com.sunjoo.drinktionary.service.DrinkService;
 import com.sunjoo.drinktionary.service.ReviewService;
@@ -53,6 +50,13 @@ public class DrinkController {
     }
 
     // 평점순
+    @GetMapping("/rankings/rating")
+    public ResponseEntity<DrinkRankingResponse> findTop5Rating() {
+        final List<DrinkWithRatingResponse> drinks = drinkService.findTop5ByReviews();
+
+        return ResponseEntity.ok(new DrinkRankingResponse(drinks));
+    }
+
 
 
     // 리뷰 많은 순
