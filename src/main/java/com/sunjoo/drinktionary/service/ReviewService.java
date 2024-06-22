@@ -1,10 +1,14 @@
 package com.sunjoo.drinktionary.service;
 
+import com.sunjoo.drinktionary.dto.ReviewResponse;
 import com.sunjoo.drinktionary.dto.ReviewResponses;
+import com.sunjoo.drinktionary.dto.WriteReviewRequest;
+import com.sunjoo.drinktionary.entity.Drink;
 import com.sunjoo.drinktionary.entity.Review;
 import com.sunjoo.drinktionary.repository.DrinkRepository;
 import com.sunjoo.drinktionary.repository.ReviewRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -46,6 +50,13 @@ public class ReviewService {
                 .sum();
         return Math.round(total / (double) reviews.size() * 100) / 100.0;
     }
+
+    // 리뷰 등록
+//    @Transactional
+//    public ReviewResponse postReview(Drink drink, WriteReviewRequest reviewRequest) {
+//
+//    }
+
 
 
 }
