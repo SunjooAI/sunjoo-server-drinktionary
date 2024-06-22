@@ -51,7 +51,7 @@ public class DrinkController {
 
     // 평점순
     @GetMapping("/rankings/rating")
-    public ResponseEntity<DrinkRankingResponse> findTop5Rating() {
+    public ResponseEntity<DrinkRankingResponse> findTop5Rating(@RequestHeader("userNo") String userNo) {
         final List<DrinkWithRatingResponse> drinks = drinkService.findTop5ByRating();
 
         return ResponseEntity.ok(new DrinkRankingResponse(drinks));
@@ -61,7 +61,7 @@ public class DrinkController {
 
     // 리뷰 많은 순
     @GetMapping("/rankings/review")
-    public ResponseEntity<DrinkRankingResponse> findTop5Review() {
+    public ResponseEntity<DrinkRankingResponse> findTop5Review(@RequestHeader("userNo") String userNo) {
         final List<DrinkWithRatingResponse> drinks = drinkService.findTop5ByReviews();
         return ResponseEntity.ok(new DrinkRankingResponse(drinks));
     }
