@@ -67,11 +67,17 @@ public class DrinkController {
     }
 
     // 주류 리뷰 등록
-//    @PostMapping("/{drink_id}/reviews")
-//    public ResponseEntity<ReviewResponse> createReview(@PathVariable(value = "drink_id") Long drinkId,
-//                                                       @RequestBody ReviewRequest reviewRequest) {
-//
-//    }
+    @PostMapping("/{drink_id}/reviews")
+    public ResponseEntity<ReviewResponse> createReview(@RequestHeader("Authorization") String token, @PathVariable(value = "drink_id") Long drinkId,
+                                                       @RequestBody WriteReviewRequest reviewRequest) {
+        // Authorization 헤더에서 Bearer 토큰을 제거
+        if (token.startsWith("Bearer ")) {
+            token = token.substring(7);
+        }
+
+        final ReviewResponse review = drinkService.postReview(drinkId, reviewRequest, token);
+        return ResponseEntity.ok(review);
+    }
 
     // 주류 리뷰 리스트 조회
     @GetMapping("/{drink_id}/reviews")

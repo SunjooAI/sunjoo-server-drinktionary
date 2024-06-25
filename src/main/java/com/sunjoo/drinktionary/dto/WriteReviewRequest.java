@@ -13,6 +13,6 @@ public class WriteReviewRequest {
 
     private long userId;
     private String comment;
-    private int score;
+    private double score;
     private String date;
 }

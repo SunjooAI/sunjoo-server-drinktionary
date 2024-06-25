@@ -31,12 +31,18 @@ public class Review {
     @Column(name = "content")
     private String content;
 
-    @Column(name = "create_at")
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "create_at", updatable = false)
     private Date createAt;
 
     @ManyToOne
     @JoinColumn(name = "drink_id")
     private Drink drink;
+
+    @PrePersist
+    protected void onCreate() {
+        this.createAt = new Date();
+    }
 
     public void updateContent(final String content) {
         this.content = content;

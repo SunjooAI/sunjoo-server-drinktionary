@@ -1,6 +1,8 @@
 package com.sunjoo.drinktionary.service;
 
 import com.sunjoo.drinktionary.dto.DrinkWithRatingResponse;
+import com.sunjoo.drinktionary.dto.ReviewResponse;
+import com.sunjoo.drinktionary.dto.WriteReviewRequest;
 import com.sunjoo.drinktionary.entity.DrinkType;
 import com.sunjoo.drinktionary.repository.DrinkRepository;
 import com.sunjoo.drinktionary.dto.DrinkResponse;
@@ -99,6 +101,14 @@ public class DrinkService {
                 .sorted(comparingDouble(DrinkWithRatingResponse::getRating))
                 .limit(5)
                 .toList();
+    }
+
+    @Transactional
+    public ReviewResponse postReview(final Long drinkId, final WriteReviewRequest request, final String token) {
+        final Drink drink = drinkRepository.findById(drinkId)
+                .orElseThrow(() -> new IllegalArgumentException("존재하지 않는 주류입니다."));
+
+        return reviewService.postReview(drink, request, token);
     }
 
 }
