@@ -53,3 +53,5 @@ jobs:
             docker pull ${{ secrets.DOCKER_USERNAME }}/drinktionary:latest
             docker-compose build
             docker-compose up -d
+            docker network connect eureka-network sunjoo-server-drinktionary-drinktionary-1
+            docker restart sunjoo-server-drinktionary-drinktionary-1
