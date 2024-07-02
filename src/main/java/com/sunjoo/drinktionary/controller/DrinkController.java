@@ -1,7 +1,9 @@
 package com.sunjoo.drinktionary.controller;
 
 import com.sunjoo.drinktionary.dto.*;
+import com.sunjoo.drinktionary.entity.Drink;
 import com.sunjoo.drinktionary.entity.DrinkType;
+import com.sunjoo.drinktionary.entity.Sentiment;
 import com.sunjoo.drinktionary.service.DrinkService;
 import com.sunjoo.drinktionary.service.ReviewService;
 import lombok.RequiredArgsConstructor;
@@ -81,11 +83,23 @@ public class DrinkController {
 
     // 주류 리뷰 리스트 조회
     @GetMapping("/{drink_id}/reviews")
-    public ResponseEntity<ReviewResponses> findReviewsById(@RequestHeader("userNo") String userNo, @PathVariable(value = "drink_id") Long drinkId) {
+    public ResponseEntity<ReviewResponses> findReviewsById(@RequestHeader("Authorization") String token, @PathVariable(value = "drink_id") Long drinkId) {
         final ReviewResponses reviews = reviewService.getReviews(drinkId);
 
         return ResponseEntity.ok(reviews);
     }
 
+    // 감정에 따른 주류 반환
+//    @GetMapping("/recommend")
+//    public ResponseEntity<?> recommendSentiment(@RequestHeader("Authorization") String token, @RequestParam String sentiment) {
+//        Sentiment sentimentEnum;
+//        sentimentEnum = Sentiment.valueOf(sentiment.toUpperCase());
+//
+//        Drink drink = drinkService.getRecommendDrink(sentimentEnum);
+//
+//        final DrinkResponse drinkResponse = drinkService.
+//        return ResponseEntity.ok(drinkResponse);
+//    }
+//
 
 }
