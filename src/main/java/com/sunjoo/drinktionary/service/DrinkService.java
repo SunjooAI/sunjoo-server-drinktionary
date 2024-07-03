@@ -113,8 +113,8 @@ public class DrinkService {
         return reviewService.postReview(drink, request, token);
     }
 
-    // 감정에 따른 주류 반환
-    public Drink getRecommendedDrink(final Sentiment sentiment) {
+    public Drink getRecommendDrink(final Sentiment sentiment) {
+
         final List<Drink> drinks = drinkRepository.findBySentiment(sentiment);
         Collections.shuffle(drinks);
 

@@ -84,7 +84,7 @@ public class DrinkController {
 
     // 주류 리뷰 리스트 조회
     @GetMapping("/{drink_id}/reviews")
-    public ResponseEntity<ReviewResponses> findReviewsById(@RequestHeader("userNo") String userNo, @PathVariable(value = "drink_id") Long drinkId) {
+    public ResponseEntity<ReviewResponses> findReviewsById(@RequestHeader("Authorization") String token, @PathVariable(value = "drink_id") Long drinkId) {
         final ReviewResponses reviews = reviewService.getReviews(drinkId);
 
         return ResponseEntity.ok(reviews);
@@ -101,7 +101,7 @@ public class DrinkController {
 //            return ResponseEntity.badRequest().body(new ErrorResponse("Sentiment mismatch"));
 //        }
 
-        Drink recommendedDrink = drinkService.getRecommendedDrink(requestedSentiment);
+        Drink recommendedDrink = drinkService.getRecommendDrink(requestedSentiment);
 
         // recommendedDrink의 정보를 얻어온다.
         Long recommendedDrinkId = recommendedDrink.getId();
@@ -110,6 +110,7 @@ public class DrinkController {
 //        DrinkResponse response = new DrinkResponse(recommendedDrink);
         return ResponseEntity.ok(drinkResponse);
     }
+
 
 
 
