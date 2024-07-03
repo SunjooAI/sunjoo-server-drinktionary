@@ -4,12 +4,14 @@ import com.sunjoo.drinktionary.dto.DrinkWithRatingResponse;
 import com.sunjoo.drinktionary.dto.ReviewResponse;
 import com.sunjoo.drinktionary.dto.WriteReviewRequest;
 import com.sunjoo.drinktionary.entity.DrinkType;
+import com.sunjoo.drinktionary.entity.Sentiment;
 import com.sunjoo.drinktionary.repository.DrinkRepository;
 import com.sunjoo.drinktionary.dto.DrinkResponse;
 import com.sunjoo.drinktionary.entity.Drink;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -109,6 +111,14 @@ public class DrinkService {
                 .orElseThrow(() -> new IllegalArgumentException("존재하지 않는 주류입니다."));
 
         return reviewService.postReview(drink, request, token);
+    }
+
+    // 감정에 따른 주류 반환
+    public Drink getRecommendedDrink(final Sentiment sentiment) {
+        final List<Drink> drinks = drinkRepository.findBySentiment(sentiment);
+        Collections.shuffle(drinks);
+
+        return drinks.get(0);
     }
 
 }

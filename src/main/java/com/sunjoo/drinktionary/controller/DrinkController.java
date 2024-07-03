@@ -1,11 +1,14 @@
 package com.sunjoo.drinktionary.controller;
 
 import com.sunjoo.drinktionary.dto.*;
+import com.sunjoo.drinktionary.entity.Drink;
 import com.sunjoo.drinktionary.entity.DrinkType;
+import com.sunjoo.drinktionary.entity.Sentiment;
 import com.sunjoo.drinktionary.service.DrinkService;
 import com.sunjoo.drinktionary.service.ReviewService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.ErrorResponse;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -27,7 +30,7 @@ public class DrinkController {
 
     // 개별
     @GetMapping("/{id}")
-    public ResponseEntity<DrinkResponse> findById(@RequestHeader("userNo") String userNo, @PathVariable Long id) {
+    public ResponseEntity<DrinkResponse> findById(@PathVariable Long id) {
         final DrinkResponse drink = drinkService.getDrinkById(id);
 
         return ResponseEntity.ok(drink);
@@ -86,6 +89,28 @@ public class DrinkController {
 
         return ResponseEntity.ok(reviews);
     }
+
+    // 감정별 주류 조회
+    @GetMapping("/recommend")
+    public ResponseEntity<DrinkResponse> recommendDrinks(@RequestParam("sentiment") String sentimentParam, @RequestHeader("Authorization") String token) {
+        // 요청 파라미터의 sentiment 값으로 Sentiment enum 객체 생성
+        Sentiment requestedSentiment = Sentiment.valueOf(sentimentParam.toUpperCase());
+
+        // 사용자의 감정과 요청 파라미터의 감정이 다른 경우 예외 처리
+//        if (sentiment != requestedSentiment) {
+//            return ResponseEntity.badRequest().body(new ErrorResponse("Sentiment mismatch"));
+//        }
+
+        Drink recommendedDrink = drinkService.getRecommendedDrink(requestedSentiment);
+
+        // recommendedDrink의 정보를 얻어온다.
+        Long recommendedDrinkId = recommendedDrink.getId();
+
+        DrinkResponse drinkResponse = drinkService.getDrinkById(recommendedDrinkId);
+//        DrinkResponse response = new DrinkResponse(recommendedDrink);
+        return ResponseEntity.ok(drinkResponse);
+    }
+
 
 
 }
