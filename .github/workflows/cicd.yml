@@ -37,8 +37,8 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/drinktionary .
-          docker push ${{ secrets.DOCKER_USERNAME }}/drinktionary
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/drinktionary:latest .
+          docker push ${{ secrets.DOCKER_USERNAME }}/drinktionary:latest
 
       - name: SSH and Deploy
         uses: appleboy/ssh-action@v0.1.5
@@ -50,6 +50,8 @@ jobs:
           script: |
             cd /home/ubuntu/sunjoo-server-drinktionary
             docker-compose down
-            git pull origin main
             docker pull ${{ secrets.DOCKER_USERNAME }}/drinktionary:latest
-            docker-compose up -d --build
+            docker-compose build
+            docker-compose up -d
+            docker network connect eureka-network sunjoo-server-drinktionary-drinktionary-1
+            docker restart sunjoo-server-drinktionary-drinktionary-1

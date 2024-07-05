@@ -10,7 +10,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://sunjoo-drinktionary.clau8wyu484y.ap-northeast-2.rds.amazonaws.com:3306/sunjoo?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
     username: root
-    password: sunjoo-drinktionary0628
+    password: ${{ secrets.DB_PASSWORD }}
   jpa:
     hibernate:
       ddl-auto: validate
@@ -25,4 +25,4 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://sunjoo-server-eureka-eureka-1:8761/eureka/
+      defaultZone: http://13.124.194.48:8761/eureka/
