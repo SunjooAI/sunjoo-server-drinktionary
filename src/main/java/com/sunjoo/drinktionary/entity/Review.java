@@ -33,7 +33,7 @@ public class Review {
     private String content;
 
     @Column(name = "create_at", updatable = false, columnDefinition = "TIMESTAMP")
-    private LocalDateTime createAt;
+    private LocalDate createAt;
 
     @ManyToOne
     @JoinColumn(name = "drink_id")
@@ -41,7 +41,7 @@ public class Review {
 
     @PrePersist
     protected void onCreate() {
-        this.createAt = LocalDateTime.now();
+        this.createAt = LocalDate.now();
     }
 
     public void updateContent(final String content) {
@@ -52,7 +52,7 @@ public class Review {
         this.starRating = rating;
     }
 
-    public void updateDate(final LocalDateTime date) {
+    public void updateDate(final LocalDate date) {
         this.createAt = date;
     }
 
