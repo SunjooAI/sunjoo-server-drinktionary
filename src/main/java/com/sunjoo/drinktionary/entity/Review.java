@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Date;
 
@@ -31,9 +32,8 @@ public class Review {
     @Column(name = "content")
     private String content;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "create_at", updatable = false)
-    private Date createAt;
+    @Column(name = "create_at", updatable = false, columnDefinition = "TIMESTAMP")
+    private LocalDateTime createAt;
 
     @ManyToOne
     @JoinColumn(name = "drink_id")
@@ -41,7 +41,7 @@ public class Review {
 
     @PrePersist
     protected void onCreate() {
-        this.createAt = new Date();
+        this.createAt = LocalDateTime.now();
     }
 
     public void updateContent(final String content) {
@@ -52,10 +52,8 @@ public class Review {
         this.starRating = rating;
     }
 
-    public void updateDate(final Date date) {
+    public void updateDate(final LocalDateTime date) {
         this.createAt = date;
     }
-
-
 
 }

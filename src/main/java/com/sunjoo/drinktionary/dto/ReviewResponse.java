@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @RequiredArgsConstructor
@@ -17,7 +18,7 @@ public class ReviewResponse {
     private final String userId;
     private final double rating;
     private final String comment;
-    private final Date date;
+    private final LocalDate date;
     private final long drinkId;
     private final int drinkCapacity;
 
