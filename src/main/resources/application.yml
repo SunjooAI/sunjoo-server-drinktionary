@@ -8,9 +8,9 @@ spring:
     name: drinktionary
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://sunjoo-drinktionary.clau8wyu484y.ap-northeast-2.rds.amazonaws.com:3306/sunjoo?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+    url: jdbc:mysql://sunjoo-drinktionary.clau8wyu484y.ap-northeast-2.rds.amazonaws.com:3306/sunjoo
     username: root
-    password: sunjoo-drinktionary0628
+    password: ${DB_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: validate
