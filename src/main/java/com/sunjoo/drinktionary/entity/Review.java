@@ -1,5 +1,6 @@
 package com.sunjoo.drinktionary.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -32,8 +33,9 @@ public class Review {
     @Column(name = "content")
     private String content;
 
-    @Column(name = "create_at", updatable = false)
-    private LocalDate createAt;
+    @Column(name = "create_at")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime createAt;
 
     @ManyToOne
     @JoinColumn(name = "drink_id")
@@ -41,7 +43,7 @@ public class Review {
 
     @PrePersist
     protected void onCreate() {
-        this.createAt = LocalDate.now();
+        this.createAt = LocalDateTime.now();
     }
 
     public void updateContent(final String content) {
@@ -52,8 +54,8 @@ public class Review {
         this.starRating = rating;
     }
 
-    public void updateDate(final LocalDate date) {
-        this.createAt = date;
+    public void updateDate(final LocalDateTime dateTime) {
+        this.createAt = dateTime;
     }
 
 }

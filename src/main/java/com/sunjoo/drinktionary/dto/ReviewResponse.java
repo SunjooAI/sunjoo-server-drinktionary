@@ -19,7 +19,7 @@ public class ReviewResponse {
     private final String userId;
     private final double rating;
     private final String comment;
-    private final LocalDate date;
+    private final LocalDateTime date;
     private final long drinkId;
     private final int drinkCapacity;
 
