@@ -8,7 +8,7 @@ spring:
     name: drinktionary
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://sunjoo-drinktionary.clau8wyu484y.ap-northeast-2.rds.amazonaws.com:3306/sunjoo
+    url: jdbc:mysql://sunjoo-drinktionary.clau8wyu484y.ap-northeast-2.rds.amazonaws.com:3306/sunjoo?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
     username: root
     password: ${DB_PASSWORD}
   jpa:
