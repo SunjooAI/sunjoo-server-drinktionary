@@ -32,7 +32,7 @@ public class Review {
     @Column(name = "content")
     private String content;
 
-    @Column(name = "create_at", updatable = false, columnDefinition = "TIMESTAMP")
+    @Column(name = "create_at", updatable = false)
     private LocalDate createAt;
 
     @ManyToOne
